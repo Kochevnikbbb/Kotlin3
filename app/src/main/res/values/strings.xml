@@ -5,4 +5,5 @@
     <string name="send">send</string>
     <string name="photo">photo</string>
     <string name="foto">Выбор фотографий</string>
+    <string name="foto2">Выбранные фотографии</string>
 </resources>

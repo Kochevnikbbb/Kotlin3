@@ -1,11 +1,12 @@
 package kg.geektech.kotlin3
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.view.LayoutInflater
+import kg.geektech.kotlin3.bases.BaseActivity
+import kg.geektech.kotlin3.bases.BaseViewModel
+import kg.geektech.kotlin3.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<ActivityMainBinding, BaseViewModel>() {
+    override fun inflateViewBinding(inflater: LayoutInflater): ActivityMainBinding {
+        return ActivityMainBinding.inflate(inflater)
     }
 }

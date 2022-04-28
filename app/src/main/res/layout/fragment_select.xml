@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.GalleryFragment">
+    tools:context=".ui.SelectFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,14 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_union"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/rubik"
             android:textStyle="bold"
-            android:text="@string/foto"
+            android:text="@string/foto2"
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:textSize="18sp"
@@ -53,5 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:spanCount="3"
         tools:listitem="@layout/item_list"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
