@@ -1,6 +1,7 @@
 package kg.geektech.kotlin3.ui
 
 import android.view.LayoutInflater
+import android.view.View
 import kg.geektech.kotlin3.R
 import kg.geektech.kotlin3.adapters.ListAdapter
 import kg.geektech.kotlin3.bases.BaseFragment
@@ -14,7 +15,14 @@ class GalleryFragment : BaseNavFragment<FragmentGalleryBinding, BaseViewModel>()
 
     private var selectedList = arrayListOf<Picture>()
     private val list = arrayListOf(
-        Picture("android.resource://kg.geekteck.multyselecthw3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img),
+        Picture("android.resource://kg.geektech.kotlin3/" +R.drawable.img)
 
     )
 
@@ -23,12 +31,10 @@ class GalleryFragment : BaseNavFragment<FragmentGalleryBinding, BaseViewModel>()
     }
 
     override fun initView()= with(binding) {
-        super.initView()
         recyclerView.adapter= ListAdapter(list, this@GalleryFragment)
     }
 
     override fun initListener() {
-        super.initListener()
         binding.btnSend.setOnClickListener {
             val list1 = arrayListOf<String>()
             for (element in selectedList) {
@@ -45,6 +51,8 @@ class GalleryFragment : BaseNavFragment<FragmentGalleryBinding, BaseViewModel>()
             selectedList.remove(picture)
         }else {
             selectedList.add(picture)
+            binding.btnSend.visibility = View.VISIBLE
+
         }
     }
 

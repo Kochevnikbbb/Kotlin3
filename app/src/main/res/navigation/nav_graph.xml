@@ -9,24 +9,29 @@
         android:id="@+id/galleryFragment"
         android:name="kg.geektech.kotlin3.ui.GalleryFragment"
         android:label="fragment_gallery"
-        tools:layout="@layout/fragment_gallery" >
+        tools:layout="@layout/fragment_gallery">
         <action
             android:id="@+id/action_galleryFragment_to_selectFragment"
-            app:destination="@id/selectFragment" >
+            app:destination="@id/selectFragment">
             <argument
                 android:name="Sheep"
-                app:argType="string[]"/>
+                app:argType="string[]" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/selectFragment"
         android:name="kg.geektech.kotlin3.ui.SelectFragment"
         android:label="fragment_select"
-        tools:layout="@layout/fragment_select" >
+        tools:layout="@layout/fragment_select">
+
+        <action
+            android:id="@+id/action_selectFragment_to_galleryFragment2"
+            app:destination="@id/galleryFragment" />
         <argument
             android:name="Sheep"
-            app:argType="string[]"
             android:defaultValue="@null"
+            app:argType="string[]"
             app:nullable="true" />
+
     </fragment>
 </navigation>

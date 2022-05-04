@@ -15,15 +15,19 @@ class SelectFragment : BaseNavFragment<FragmentSelectBinding, BaseViewModel>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         args = SelectFragmentArgs.fromBundle(requireArguments())
+      /*  binding.btnBack.setOnClickListener {
+            navigate(SelectFragmentDirections.actionSelectFragmentToGalleryFragment2())
+        }*/
     }
 
     override fun inflateViewBinding(inflater: LayoutInflater): FragmentSelectBinding {
         return FragmentSelectBinding.inflate(inflater)
     }
-    override fun initView()= with(binding){
+
+    override fun initView() = with(binding) {
         super.initView()
         args.sheep?.toCollection(list)
-        recyclerView.adapter= SelectedListAdapter(list)
+        recyclerView.adapter = SelectedListAdapter(list)
     }
 
 }
